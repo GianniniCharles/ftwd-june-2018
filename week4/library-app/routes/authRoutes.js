@@ -44,7 +44,7 @@ userRouter.post('/login', (req, res, next)=>{
     const theUsername = req.body.theUsername;
     const thePassword = req.body.thePassword;
     if (theUsername === "" || thePassword === "") {
-        res.render("userViews/loginPage", {errorMessage: "Indicate a username and a password to sign up"});
+        res.render("userViews/loginPage", {errorMessage: "Indicate a username and a password to log in"});
         return;
       }
     User.findOne({ "username": theUsername }, (err, user) => {
